@@ -2,7 +2,7 @@
 # integers. Return the maximum product you can get.
 
 def integer_breaker(n):
-    dp = {1: 1}  # cashing technique
+    dp = {1: 1}  # caching technique
 
     def dfs(num):
         if num in dp:  # this can't be further broken down
