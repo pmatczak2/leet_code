@@ -2,10 +2,10 @@
 # integers. Return the maximum product you can get.
 
 def integer_breaker(n):
-    dp = {1: 1}  # caching technique
+    dp = {1: 1}  # caching dynamic programing technique, base case is 1.
 
     def dfs(num):
-        if num in dp:  # this can't be further broken down
+        if num in dp:  # this can't be further broken down with the base case
             return dp[num]
 
         dp[num] = 0 if num == n else num  # here I am making sure that the original value will be broken down, but the
