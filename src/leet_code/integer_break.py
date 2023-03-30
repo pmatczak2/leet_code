@@ -19,4 +19,4 @@ def integer_breaker(n):
     return dfs(n)
 
 
-print(integer_breaker(10))
+print(integer_breaker(4))
