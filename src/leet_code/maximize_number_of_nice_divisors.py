@@ -4,7 +4,7 @@
 # The number of prime factors of n (not necessarily distinct) is at most primeFactors. The number of nice divisors of
 # n is maximized. Note that a divisor of n is nice if it is divisible by every prime factor of n. For example,
 # if n = 12, then its prime factors are [2,2,3], then 6 and 12 are nice divisors, while 3 and 4 are not. Return the
-# number of nice divisors of n. Since that number can be too large, return it modulo 109 + 7.
+# number of nice divisors of n. Since that number can be too large, return it modulo 10**9 + 7.
 #
 # Note that a prime number is a natural number greater than 1 that is not a product of two smaller natural numbers.
 # The prime factors of a number n is a list of prime numbers such that their product equals n.
@@ -34,9 +34,9 @@ def max_nice_divisors(primeFactors):
     return 2 * pow(3, primeFactors // 3, mod) % mod
 print(max_nice_divisors(73))
 
-# line 26: max_nice_divisors and it takes an integer primeFactors as input and returns an integer as output. line 27:
+# line 26: max_nice_divisors it takes an integer primeFactors as input and returns an integer as output. line 27:
 # This line sets the value of mod to be 1 billion plus 7. This number is used later in the function to take the
-# modulus of large numbers and prevent overflow.
+# modulus of large numbers and prevent overflow. (this is often used in competitive programming and coding challenges)
 
 # line 28,29: If the input primeFactors is less than 4, the function
 # simply returns primeFactors. This is because the maximum number of nice divisors for any number less than 4 is the
