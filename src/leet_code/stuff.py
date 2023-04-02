@@ -1,4 +1,4 @@
-import timeit
+import time
 
 def is_palindrome(word):
     left, right = 0, len(word) - 1
@@ -17,9 +17,9 @@ def is_palindrome(word):
     return True
 
 word = "stuff"
-t = timeit.timeit(lambda: is_palindrome(word), number=1000)
 
-print(f"Time taken: {t:.6f} seconds")
+measure = time.process_time()
+print(f"{is_palindrome(word)} {measure}")
 
 
 
