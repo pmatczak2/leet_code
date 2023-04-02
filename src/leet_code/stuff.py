@@ -1,5 +1,13 @@
-def is_palidrome(word):
-    return word == word[::-1]
+import timeit
+
+def is_palindrome(word):
+    left, right = 0, len(word) - 1
+    while left < right:
+        if word[left] != word[right]:
+            return False
+        left += 1
+        right -= 1
+    return True
 
 
 def is_palindrome(word):
@@ -8,4 +16,10 @@ def is_palindrome(word):
             return False
     return True
 
-print(is_palindrome("stuff"))
+word = "stuff"
+t = timeit.timeit(lambda: is_palindrome(word), number=1000)
+
+print(f"Time taken: {t:.6f} seconds")
+
+
+
