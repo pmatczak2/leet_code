@@ -90,3 +90,60 @@ if __name__ == '__main__':
     # Remove a book and print the updated library
     app.remove_book("The Lottery")
     print([book.title for book in app.library])
+
+    # Line 9 - 15: The get_current_page_text() method is defined inside the Story class , which represents a
+    # book.This method is used to retrieve the current page of the book. The page_size variable is set to 1000,
+    # which represents the maximum number of characters to be displayed on a page. The start_index variable is
+    # calculated by multiplying the current page number (self.current_page) by the page_size, which gives the index
+    # of the first character of the current page. The end_index variable is set to start_index + page_size,
+    # which gives the index of the last character of the current page. The if statement checks whether the start
+    # index of the current page is greater than or equal to the total number of characters in the book (len(
+    # self.content)). If this is the case, it means that the current page is out of range, and None is returned.
+    # Otherwise, the return statement returns a substring of the book's content that starts from the start_index and
+    # ends at the end_index, representing the current page's text.
+
+    # Line 18 - 21: This is a Python class definition for a CloudReadingApp. In the __init__ method, the class
+    # initializes two instance variables library and active_book_index. library is a list that will hold all of the
+    # books in the app's library, and active_book_index is a variable that keeps track of the index of the currently
+    # active book in the library. library is initialized as an empty list with self.library = [],
+    # while active_book_index is initialized to None with self.active_book_index = None.
+
+    # line 26 - 31: This code defines a method called remove_book() that takes a title parameter. It first loops
+    # through the list of books in the library using enumerate() to get both the index and the book object at the
+    # same time. Then, for each book, it checks if the title matches the book's title attribute. If there is a match,
+    # it uses the del statement to remove the book from the library list using the index.
+    #
+    # If the active_book_index equals the index of the book that was just removed, then self.active_book_index is set
+    # to None to indicate that there is no active book selected.
+
+    # Line 33-37: This function takes a book title as an argument and sets the active book index to the index of the
+    # book with the corresponding title in the library list. It does this by iterating through the library list using
+    # the enumerate() function, which allows it to get both the index and the book object at each iteration. If it
+    # finds a book with a matching title, it sets the active book index to the current index and then returns, ending
+    # the loop. If it doesn't find a matching book, the active book index remains unchanged.
+
+    # Line 39-41: This function returns the active book in the library. It first checks if there is an active book by
+    # checking if self.active_book_index is not None. If there is an active book, it returns the book object from the
+    # self.library
+    # list at the index self.active_book_index. If there is no active book, it returns None.
+
+    # Line 48-53: This code is for the next_page method of the CloudReadingApp class. Here is what it does:
+    # It first gets the active book by calling the get_active_book() method. This is done to check if there is an
+    # active book or not.
+    # If there is an active book, it checks if the current page is less than the total number of pages in the book.
+    # This is done to ensure that we do not go beyond the last page of the book.
+    # If the current page is less than the total number of pages, it increments the current_page attribute of the
+    # active book by 1.
+    # Finally, it returns the text of the current page of the active book by calling the get_current_page_text()
+    # method of the active book.
+    # So, in summary, this method helps to navigate to the next page of the active book, if there is one.
+
+    # Line 55-63: This code defines a method called previous_page() which is used to navigate to the previous page of
+    # the currently active book in the CloudReadingApp instance.
+    # The method first gets the currently active book using the get_active_book() method. If there is an active book,
+    # it checks if the current page number of the book is greater than zero. If it is, it decrements the current page
+    # number by one, and returns the text of the new current page using the get_current_page_text() method of the book.
+    # If the current page number is already 0, it sets the current page number to 0 again (as it cannot go below 0)
+    # and returns the text of the first page of the book using get_current_page_text().
+    # Essentially, this method allows the user to move back one page in the currently active book, or to stay on the
+    # first page if they are already on it.
