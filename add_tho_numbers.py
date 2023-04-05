@@ -72,23 +72,23 @@ if __name__ == "__main__":
 # Each node has two attributes: val (which stores the value of the node) and next (which points to the next node
 # in the list).
 
-# line 23-26 This block of code defines a class Solution that has a method addTwoNumbers which takes in two linked
+# line 25-28 This block of code defines a class Solution that has a method addTwoNumbers which takes in two linked
 # lists l1 and l2 as arguments and returns a new linked list that represents the sum of the two input linked lists.
 # This block of code creates a new ListNode object called dummy with default values for val and next, and then creates a
 # new variable cur that initially points to the dummy node. dummy serves as a placeholder that helps us keep track of
 # he head of the result linked list
 
-# Line 28-31 This block of code initializes a variable carry to 0, and then starts a while loop that will run until we
+# Line 30-33 This block of code initializes a variable carry to 0, and then starts a while loop that will run until we
 # have finished processing all the nodes in both input linked lists as well as any carry-over from the previous
 # addition operation.
 # This block of code creates two new variables v1 and v2 that store the values of the current nodes in l1 and l2,
 # respectively. If l1 or l2 is None, which means we have reached the end of the linked list, we set the value to 0.
 
-# line 36-38 This block of code computes the sum of v1, v2, and the carry-over from the previous addition operation
+# line 35-39 This block of code computes the sum of v1, v2, and the carry-over from the previous addition operation
 # (which is initially 0). We then update the carry variable to be the integer division of val by 10, and we update val
 # to be the remainder of val divided by 10. This way, val will always be a single-digit number.
 
-# line 39-42 This block of code creates a new ListNode object with the value val, and sets the next attribute of cur
+# line 42 This block of code creates a new ListNode object with the value val, and sets the next attribute of cur
 # (which initially points to dummy) to point to the new node. We then update cur to point to the new node, so that we
 # can add more nodes to the linked list as necessary.
 
