@@ -116,6 +116,9 @@ if __name__ == "__main__":
 # line 42 This block of code creates a new ListNode object with the value val, and sets the next attribute of cur
 # (which initially points to dummy) to point to the new node. We then update cur to point to the new node, so that we
 # can add more nodes to the linked list as necessary.
+# After the first ListNode object is created with ListNode(val), cur.next is set to this new node, which effectively
+# adds the new node to the end of the linked list. The cur variable is then updated to point to this new node so that
+# the next node can be added to the list in the next iteration of the while loop.
 
 # Line 43-44 This block of code updates the pointers to the next nodes in the input linked lists l1 and l2. If we
 # have reached the end of the linked list (i.e., l1 or l2 is None), we set the pointer to None. If l1 is not None,
